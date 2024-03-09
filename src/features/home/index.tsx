@@ -20,7 +20,7 @@ export const Home = () => {
     <Box mb={10}>
       <Spacer h={20} />
       <Container maxW="3xl" centerContent>
-        <Image src="/public/images/img-top.jpg" alt="home画面の画像" />
+        <Image src="/images/img-top.jpg" alt="home画面の画像" />
       </Container>
       <Spacer h={16} />
       <Container maxW="3xl" centerContent>
