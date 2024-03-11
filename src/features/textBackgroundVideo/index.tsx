@@ -20,6 +20,8 @@ export const TextBackgroundVideo = () => {
         w="100%"
         h="100%"
         objectFit="cover"
+        controls
+        playsInline
         autoPlay
         muted
         loop
