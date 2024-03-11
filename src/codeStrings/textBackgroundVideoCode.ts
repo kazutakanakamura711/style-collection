@@ -1,4 +1,5 @@
 export const textBackgroundVideoCode = `
+  const text = 'SampleText';
   export const TextBackgroundVideo = () => {
     return (
       <Box
@@ -17,6 +18,8 @@ export const textBackgroundVideoCode = `
           w="100%"
           h="100%"
           objectFit="cover"
+          controls
+          playsInline
           autoPlay
           muted
           loop
