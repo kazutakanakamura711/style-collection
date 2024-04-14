@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const MainLayout: FC<Props> = ({ children }) => {
-  return <Box>{children}</Box>;
+  return <Box pt="72px">{children}</Box>;
 };
