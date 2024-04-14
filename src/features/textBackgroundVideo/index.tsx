@@ -1,13 +1,12 @@
+import { text, videoUrl } from '@/shared/utils/sampleConst';
 import { Box, Text } from '@chakra-ui/react';
-
-const text = 'SampleText';
 
 export const TextBackgroundVideo = () => {
   return (
     <Box
       position="absolute"
       w="100%"
-      h="100vh"
+      h="calc(100vh - 72px)"
       display="grid"
       placeItems="center"
       overflow="hidden"
@@ -26,10 +25,7 @@ export const TextBackgroundVideo = () => {
         muted
         loop
       >
-        <source
-          src="https://www.w3schools.com/howto/rain.mp4"
-          type="video/mp4"
-        />
+        <source src={videoUrl} type="video/mp4" />
       </Box>
       <Text
         as="h1"
