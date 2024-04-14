@@ -25,8 +25,8 @@ export const CodeModal: FC<Props> = ({ isOpen, onClose, selectedMenu }) => {
       <ModalContent>
         <ModalHeader>Example Collection</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>
-          <Code>{codeString}</Code>
+        <ModalBody overflowY="auto" maxHeight="80vh">
+          <Code whiteSpace="pre-wrap">{codeString}</Code>
         </ModalBody>
       </ModalContent>
     </Modal>
