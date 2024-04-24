@@ -1,19 +1,22 @@
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Box, Button, HStack, Icon, useDisclosure } from '@chakra-ui/react';
 import { useCallback, useState } from 'react';
-import { RouteLabelType } from '@/types/routeLabel';
 import { MenuModal } from './MenuModal';
 import { CodeModal } from '../elements/CodeModal';
+import { useLocation } from 'react-router-dom';
+import { RoutePathType, parseRoutePathType } from '@/types/routePath';
 
 export const Header = () => {
-  const [selectedMenu, setSelectedMenu] = useState<RouteLabelType>(
-    RouteLabelType.Home,
-  );
+  const location = useLocation();
+  const initialRoute =
+    parseRoutePathType(location.pathname) || RoutePathType.Home;
+  const [selectedMenu, setSelectedMenu] = useState<RoutePathType>(initialRoute);
+
   const menuModal = useDisclosure();
   const codeModal = useDisclosure();
 
   const handleMenuSelect = useCallback(
-    (menu: RouteLabelType) => {
+    (menu: RoutePathType) => {
       setSelectedMenu(menu);
       menuModal.onClose();
     },

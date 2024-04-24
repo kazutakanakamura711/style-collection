@@ -1,5 +1,5 @@
 import { codeStringMap } from '@/codeStrings';
-import { RouteLabelType } from '@/types/routeLabel';
+import { RoutePathType } from '@/types/routePath';
 import {
   Code,
   Modal,
@@ -14,7 +14,7 @@ import { FC } from 'react';
 interface Props {
   isOpen: boolean;
   onClose: () => void;
-  selectedMenu: RouteLabelType;
+  selectedMenu: RoutePathType;
 }
 
 export const CodeModal: FC<Props> = ({ isOpen, onClose, selectedMenu }) => {
