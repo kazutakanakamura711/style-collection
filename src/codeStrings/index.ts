@@ -1,13 +1,13 @@
-import { RouteLabelType } from '../types/routeLabel';
 import { homeCode } from './homeCode';
 import { textShadow3d } from './textShadow3d';
 import { textBackgroundVideoCode } from './textBackgroundVideoCode';
+import { RoutePathType } from '@/types/routePath';
 
 export * from './homeCode';
 export * from './textBackgroundVideoCode';
 
 export const codeStringMap = {
-  [RouteLabelType.Home]: homeCode,
-  [RouteLabelType.TextShadow3d]: textShadow3d,
-  [RouteLabelType.TextBackgroundVideo]: textBackgroundVideoCode,
+  [RoutePathType.Home]: homeCode,
+  [RoutePathType.TextShadow3d]: textShadow3d,
+  [RoutePathType.TextBackgroundVideo]: textBackgroundVideoCode,
 };

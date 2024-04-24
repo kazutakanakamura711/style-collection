@@ -11,14 +11,14 @@ import {
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import { FC } from 'react';
-import { RouteLabelType, parseRouteLabelType } from '@/types/routeLabel';
 import { publicRoutes } from '@/routes/publicRoutes';
 import { useGetScreenSizes } from '@/shared/hooks/useGetScreenSizes';
+import { RoutePathType } from '@/types/routePath';
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
-  onSelect: (menu: RouteLabelType) => void;
+  onSelect: (menu: RoutePathType) => void;
 }
 
 export const MenuModal: FC<Props> = ({ isOpen, onClose, onSelect }) => {
@@ -50,7 +50,7 @@ export const MenuModal: FC<Props> = ({ isOpen, onClose, onSelect }) => {
                 to={route.path}
                 key={index}
                 onClick={() => {
-                  const label = parseRouteLabelType(route.label);
+                  const label = route.path;
                   if (!label) return;
                   onSelect(label);
                 }}
